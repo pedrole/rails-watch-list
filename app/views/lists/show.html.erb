@@ -17,7 +17,7 @@
               <p><%= movie.overview %></p>
             </div>
             <h2 class="card-trip-pricing"><%= movie.rating %></h2>
-
+            <%= link_to 'delete', bookmark_path(Bookmark.find_by(list: @list, movie: movie) ) , data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'card-trip-user  btn btn-dark' %>
           </div>
         </div>
       </div>
