@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-5">
 
   <div class="d-flex justify-content-between align-items-start">
     <h1>My Lists</h1>
@@ -7,11 +7,11 @@
 
 
     </div>
-  <div class="row">
+    <div class="row">
     <% @lists.each do |item| %>
       <div class="col-4">
 
-      <%= link_to list_path(item)  do  %>
+      <%= link_to list_path(item), class: 'text-decoration-none'  do  %>
           <div class="card-category" style="background-color: blue;">
               <%= item.name %>
           </div>
